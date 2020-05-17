@@ -1,0 +1,16 @@
+name: C++ CI
+
+on: [push]
+
+jobs:
+  build-ubuntu:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: run cmake
+      run: mkdir build && cd build && cmake ..
+    - name: build
+      run: cmake --build build
+    - name: test
+      run: cd build && ./hello_world
