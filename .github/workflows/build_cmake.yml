@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: ls
+      run: ls
     - name: run cmake
       run: mkdir build && cd build && cmake ..
     - name: build
