@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: checkout
+      uses: actions/checkout@v1
     - name: ls
       run: ls -R
     - name: run cmake
@@ -15,7 +17,7 @@ jobs:
     - name: run cmake 2
       run: mkdir build && cd build
     - name: run cmake 3
-      run: ls -R && cd build && ls -R && echo $PWD && cmake .. || cmake
+      run: ls -R && cd build && ls -R && echo $PWD && cmake ..
     - name: build
       run: cmake --build build
     - name: test
