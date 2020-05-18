@@ -12,7 +12,9 @@ jobs:
       run: ls -R
     - name: run cmake
       run: cmake --help && ls -R
+    - name: run cmake 2
       run: mkdir build && cd build
+    - name: run cmake 3
       run: ls -R && cmake ..
     - name: build
       run: cmake --build build
