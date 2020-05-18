@@ -15,7 +15,7 @@ jobs:
     - name: run cmake 2
       run: mkdir build && cd build
     - name: run cmake 3
-      run: ls -R && && cd build && ls -R && echo $PWD && cmake .. || cmake
+      run: ls -R && && cd build && ls -R && cmake .. || cmake
     - name: build
       run: cmake --build build
     - name: test
