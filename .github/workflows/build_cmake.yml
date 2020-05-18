@@ -9,7 +9,7 @@ jobs:
     
     steps:
     - name: ls
-      run: ls
+      run: ls -R
     - name: run cmake
       run: mkdir build && cd build && cmake ..
     - name: build
