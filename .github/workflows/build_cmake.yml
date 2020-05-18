@@ -11,9 +11,9 @@ jobs:
     - name: ls
       run: ls -R
     - name: run cmake
-      run: cmake --help && ls -r || \
-      mkdir build && cd build && \
-      ls -R && cmake ..
+      run: cmake --help && ls -R
+      run: mkdir build && cd build
+      run: ls -R && cmake ..
     - name: build
       run: cmake --build build
     - name: test
